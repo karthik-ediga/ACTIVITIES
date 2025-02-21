@@ -6,7 +6,7 @@
     margin:10px;
     border-radius:5px;
     box-shadow:0 4px 8px black;
-    transition:1s;
+    transition:0.1s;
 }
 .desc{
     padding:0 2px 0 2px;
