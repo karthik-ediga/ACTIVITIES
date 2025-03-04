@@ -7,11 +7,15 @@ app.use("/api",(req,res,next)=>{
     if(token==="giveaccess"){
        return next();
     }
-   res.send("ACCESS DENIED!");
+   next(new Error("ACCESS DENIED!"));
 });
 
 app.get("/api",(req,res)=>{
     res.send("data");
+});
+
+app.use("/api",(err,req,res,next)=>{
+    res.send(err.message);
 });
 
 app.listen(8080,()=>{
